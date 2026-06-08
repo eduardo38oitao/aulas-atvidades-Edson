@@ -22,12 +22,12 @@ Chame o método na função e coloque o resultado na tela de forma organizada.
         peso:80,
         altura:1.80,
         calcularIMC:function(){
-            return (peso/(altura*altura));
+            return this.peso / (this.altura* this.altura);
         }};
         
         function mostrarIMC(){
             let resultado= paciente.calcularIMC();
-            document.getElementById('txtIMC').innerHTML = "resultado"+ resultado+"imc";
+            document.getElementById('txtIMC').innerHTML =resultado;
         }
 
        
