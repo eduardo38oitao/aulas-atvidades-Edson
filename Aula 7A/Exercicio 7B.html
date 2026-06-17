@@ -16,21 +16,20 @@ inputs do usuário, jogue para dentro do objeto e exiba o resultado na tela.
     <input type="text" id="setorFunc" placeholder="Setor/Departamento"><br><br>
     <button onclick="criarCracha()">Imprimir Crachá</button>
     
-    <p id="txtCracha" style="font-weight: bold; color: rgb(0, 111, 139);"></p>
+    <p id="txtCracha" style="font-weight: bold; color: darkblue;"></p>
 
 <script>
     const funcionario = {
         nome: "",
         setor: 0,
         gerarCracha: function(){
-            return `CRACHÁ: ${this.nome.toUpperCase()} | DEPT: ${this.setor.toUpperCase()}`;
+            return `Crachá: ${this.nome.toUpperCase()} | DEPT: ${this.setor}`;
         }
     };
 
     function criarCracha(){
         funcionario.nome = document.getElementById('nomeFunc').value;
         funcionario.setor = document.getElementById('setorFunc').value;
-
 
         let container = document.getElementById('txtCracha');
         container.style.display = "block";
